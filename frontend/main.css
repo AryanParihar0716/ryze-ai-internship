@@ -1,0 +1,228 @@
+body{
+   /* background-color: tomato;*/
+     background-color: #0F172A;
+    font-style: normal;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateX(-200px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* THE PARENT CONTAINER */
+/*.navbar {
+    display: flex;                  /* Correct syntax (not flexbox) 
+    justify-content: center; /* Pushes logo to left, links to right 
+    align-items: center;            /* Keeps everything centered vertically 
+    padding: 20px 5%;   
+    animation: pulse 1s ease-in-out infinite forwards;            
+}
+*/
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(15, 23, 42, 0.8); /* Semi-transparent navy */
+    backdrop-filter: blur(8px);       /* Professional glass effect */
+    /* Reduced pulse intensity so it's not distracting */
+    animation: pulse 2s ease-in-out infinite; 
+}
+/* THE LOGO */
+#logo {
+    height: 100px;                 
+    width: auto;
+    
+}
+
+/* THE LINKS (Spacing them out) */
+.navbar a {
+    text-decoration: none;
+    color: #E2E8F0;
+    font-weight: 500;
+    margin-left: 30px;              /* Adds space to the left of each link */
+    transition: 0.3s;
+}
+
+
+.hero{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: #E2E8F0;
+   font-size: x-large;
+   font-weight: 500;
+   gap: 30px
+   
+}
+@keyframes pulseGlow {
+    0% { text-shadow: 0 0 5px rgba(34, 197, 94, 0.2); }
+    50% { text-shadow: 0 0 20px rgba(34, 197, 94, 0.6); }
+    100% { text-shadow: 0 0 5px rgba(34, 197, 94, 0.2); }
+}
+.hero h1:hover{
+    text-decoration:underline;
+    text-transform:capitalize;
+    color: #22c55e;
+    animation: pulseGlow 2s infinite ease-in-out;    
+}
+.hero p:hover{
+    text-decoration:underline;
+    text-decoration-thickness: 2px;
+    color: #22c55e;
+    animation: pulseGlow 2s infinite ease-in-out; 
+}
+#features{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+    color:thistle;
+}
+.features{
+    /*display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction:column;
+    font-size: x-large;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+    margin-top: 50px;  
+    width: 200px;
+    height: 150px;*/
+    display: flex;
+    justify-content: center;   /* Centers boxes horizontally */
+    align-items: center;       /* Centers boxes vertically */
+    gap: 40px;                 /* Space between boxes */
+    
+    margin-top: 50px;
+    width: 100%;               /* Take up the full width of the screen */
+    min-height: 300px;         /* Give it enough height to breathe */
+    
+    /* Optional: If you want to limit how wide the group gets */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+             
+}
+/*.features #feature1,#feature2,#feature3{
+    border: 10px solid firebrick;
+    text-align: center;
+    border-radius: 20%;
+    color: #22c55e;
+    
+}*/
+.features #feature1, #feature2, #feature3 {
+    /* Change firebrick to a subtle border that matches the navy theme */
+    border: 2px solid rgba(226, 232, 240, 0.1); 
+    background-color: #1E293B; /* Lighter navy than the body for depth */
+    
+    text-align: center;
+    border-radius: 16px; /* A pixel value looks cleaner than 20% */
+    color: #22c55e;
+    padding: 30px;
+    transition: all 0.4s ease; /* Makes mouse-out smooth */
+}
+#feature1:hover, #feature2:hover, #feature3:hover {
+    cursor: pointer;
+    /* Bounce for fun, back for a professional glow effect */
+    animation: bounce 1s ease-in-out infinite, back 2s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.2); /* Soft green glow */
+}
+@keyframes back {
+   
+    from { background-color: #1E293B; border-color: #3B82F6; } /* Navy to Blue */
+    to { background-color: #0F172A; border-color: #22c55e; }   /* Darker Navy to Green */
+}
+.main-footer {
+    background-color: #0B1120; 
+    padding: 80px 5% 40px 5%;
+    margin-top: 100px;
+    border-top: 1px solid rgba(226, 232, 240, 0.05);
+}
+
+.footer-cta {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.footer-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #E2E8F0;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(226, 232, 240, 0.1);
+    margin-bottom: 60px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+.footer-brand .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #9CA3AF;
+}
+
+.footer-brand p {
+    color: #9CA3AF;
+    max-width: 250px;
+}
+
+.footer-links h4, .footer-contact h4 {
+    color: #E2E8F0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.footer-links a {
+    display: block;
+    color: #9CA3AF;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #22c55e; 
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(226, 232, 240, 0.05);
+    text-align: center;
+    font-size: 0.8rem;
+    color: #4B5563;
+}
+.footer-contact{
+    color: #E2E8F0;
+}

@@ -1,0 +1,165 @@
+body{
+   /* background-color: tomato;*/
+     background-color: #0F172A;
+    font-style: normal;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    background: rgba(15, 23, 42, 0.9); /* Your Midnight Navy */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.05);
+}
+
+/* The magic trick: 3 equal columns */
+.nav-column {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+}
+
+.left { justify-content: flex-start; }
+.center { justify-content: center; }
+.right { justify-content: flex-end; }
+
+
+#back-link {
+    text-decoration: none;
+    color: #9CA3AF;
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#back-link:hover {
+    color: #22c55e; 
+    transform: translateX(-5px);
+}
+
+
+#logo {
+    height: 50px; 
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateX(-200px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.about-hero,.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8; /* Makes the text feel high-end and readable */
+    color: #9CA3AF;
+    font-size: 1.1rem;
+    text-align: center;
+}
+#founders{
+    height: auto;
+    width: 500px;   
+}
+#founder{
+    display: flex;
+    justify-content: center;
+    animation:pulse 2s ease-in-out infinite;
+}
+.main-footer {
+    background-color: #0B1120; /* Slightly darker than your body #0F172A */
+    padding: 80px 5% 40px 5%;
+    margin-top: 100px;
+    border-top: 1px solid rgba(226, 232, 240, 0.05);
+}
+
+.footer-cta {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.footer-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #E2E8F0;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(226, 232, 240, 0.1);
+    margin-bottom: 60px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Important for mobile! */
+}
+
+.footer-brand .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #9CA3AF;
+}
+
+.footer-brand p {
+    color: #9CA3AF;
+    max-width: 250px;
+}
+
+.footer-links h4, .footer-contact h4 {
+    color: #E2E8F0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.footer-links a {
+    display: block;
+    color: #9CA3AF;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #22c55e; /* Your Emerald Green */
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(226, 232, 240, 0.05);
+    text-align: center;
+    font-size: 0.8rem;
+    color: #4B5563;
+}
+.footer-contact{
+    color:#9CA3AF;
+}

@@ -1,0 +1,175 @@
+body{
+   /* background-color: tomato;*/
+     background-color: #0F172A;
+    font-style: normal;
+}
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligns them at the bottom so the tall one stands out */
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.pricing-card {
+   /* background:#9CA3AF;*/
+    border: 1px solid rgba(226, 232, 240, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    flex: 1;
+    max-width: 350px;
+    text-align: center;
+    transition: 0.3s;
+    color: #9CA3AF;
+    
+}
+
+/* THE FEATURED BOX STYLE */
+.pricing-card.featured {
+    border: 2px solid #22c55e; /* Use your Emerald Green */
+    transform: scale(1.05); /* Makes it slightly bigger */
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+    position: relative;
+    color: #9CA3AF;
+    animation: pulse 2s ease-in-out infinite
+    
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #22c55e;
+    color: #0F172A;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 20px 0;
+
+}
+
+.price span {
+    font-size: 1rem;
+    color: #9CA3AF;
+}
+
+.pricing-card ul {
+    list-style: none;
+    text-align: left;
+    margin: 30px 0;
+    color: #9CA3AF;
+}
+
+.pricing-card li {
+    margin-bottom: 12px;
+}
+.text-gradient,.sub-headline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9CA3AF;
+
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateX(-200px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.main-footer {
+    background-color: #0B1120; /* Slightly darker than your body #0F172A */
+    padding: 80px 5% 40px 5%;
+    margin-top: 100px;
+    border-top: 1px solid rgba(226, 232, 240, 0.05);
+}
+
+.footer-cta {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.footer-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #E2E8F0;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(226, 232, 240, 0.1);
+    margin-bottom: 60px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Important for mobile! */
+}
+
+.footer-brand .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #9CA3AF;
+}
+
+.footer-brand p {
+    color: #9CA3AF;
+    max-width: 250px;
+}
+
+.footer-links h4, .footer-contact h4 {
+    color: #E2E8F0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.footer-links a {
+    display: block;
+    color: #9CA3AF;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #22c55e; /* Your Emerald Green */
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(226, 232, 240, 0.05);
+    text-align: center;
+    font-size: 0.8rem;
+    color: #4B5563;
+}
+.footer-contact{
+    color: #9CA3AF;
+}
